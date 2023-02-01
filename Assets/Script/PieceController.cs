@@ -73,8 +73,8 @@ public class PieceController : MonoBehaviour
 
         if(cell != null && !cell.isTaken)
         {
-            _rigidbody.isKinematic = true;
             cell.PieceIsPlaced(true);
+            _rigidbody.isKinematic = true;
             transform.SetParent(cell.transform);
 
             transform.localPosition = Vector3.zero;

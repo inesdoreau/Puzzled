@@ -7,7 +7,7 @@ using UnityEngine;
 public class PuzzlePiece : MonoBehaviour
 {
     public Collider pieceCollider;
-    public MeshRenderer pieceRenderer;
+    public List<MeshRenderer> pieceRenderers;
 
     public bool isTaken = false;
     public PieceController correctPiece;
@@ -16,7 +16,28 @@ public class PuzzlePiece : MonoBehaviour
     private void Awake()
     {
         pieceCollider = GetComponent<Collider>();
-        pieceRenderer = GetComponent<MeshRenderer>();
+
+        pieceRenderers.Clear();
+
+        if(transform.childCount == 0)
+        {
+            pieceRenderers.Add(transform.GetComponent<MeshRenderer>());
+        }
+        else
+        {
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                if (transform.GetChild(i).GetComponent<MeshRenderer>())
+                {
+                    pieceRenderers.Add(transform.GetChild(i).GetComponent<MeshRenderer>());
+                }
+                else
+                {
+                    Debug.LogError("One children of the transform does not contain Mesh Renderer", transform.GetChild(i));
+                }
+            }
+
+        }
     }
     // Start is called before the first frame update
     void Start()
@@ -32,15 +53,9 @@ public class PuzzlePiece : MonoBehaviour
 
     public void PieceIsPlaced(bool _isTaken)
     {
+        pieceCollider.enabled = !_isTaken;
+        pieceRenderers.ForEach(r => r.enabled = !_isTaken);
         isTaken = _isTaken;
-        if(isTaken)
-        {
-            pieceRenderer.enabled = false;
-        }
-        else
-        {
-            pieceRenderer.enabled = true;
-        }
     }
 
     public bool CheckCorrect()

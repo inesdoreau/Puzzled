@@ -2,95 +2,72 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] protected Transform CameraTransform;
+    public float walkingSpeed = 7.5f;
+    public float runningSpeed = 11.5f;
+    public float jumpSpeed = 8.0f;
+    public float gravity = 20.0f;
+    public Camera playerCamera;
+    public float lookSpeed = 2.0f;
+    public float lookXLimit = 45.0f;
 
-    [SerializeField] private float moveChangeFactor = 0.9f;
-    //public float mouseSensitivity = 1.0f;
-    public float moveSpeed = 2f;
+    CharacterController characterController;
+    Vector3 moveDirection = Vector3.zero;
+    float rotationX = 0;
 
-    // Start is called before the first frame update
+    [HideInInspector]
+    public bool canMove = true;
+
     void Start()
     {
-        
+        characterController = GetComponent<CharacterController>();
+
+        // Lock cursor
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        ManageMovements();
-        ManageRotation();
-    }
+        // We are grounded, so recalculate move direction based on axes
+        Vector3 forward = transform.TransformDirection(Vector3.forward);
+        Vector3 right = transform.TransformDirection(Vector3.right);
+        // Press Left Shift to run
+        bool isRunning = Input.GetKey(KeyCode.LeftShift);
+        float curSpeedX = canMove ? (isRunning ? runningSpeed : walkingSpeed) * Input.GetAxis("Vertical") : 0;
+        float curSpeedY = canMove ? (isRunning ? runningSpeed : walkingSpeed) * Input.GetAxis("Horizontal") : 0;
+        float movementDirectionY = moveDirection.y;
+        moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 
-    #region Movements
-
-    private Vector3 _velocity;
-    private float Forward => Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W) ? 1f : 0f;
-    private float Backward => Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S) ? 1f : 0f;
-    private float Right => Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D) ? 1f : 0f;
-    private float Left => Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A) ? 1f : 0f;
-    private float Up => Input.GetKey(KeyCode.E) ? 1f : 0f;
-    private float Down => Input.GetKey(KeyCode.Q) ? 1f : 0f;
-
-    private void ManageMovements()
-    {
-        //Vector3 newVelocity = transform.forward * (Forward - Backward);
-        //newVelocity += transform.right * (Right - Left);
-        //newVelocity += transform.up * (Up - Down);
-        Vector3 newVelocity = CameraTransform.forward * (Forward - Backward);
-        newVelocity += CameraTransform.right * (Right - Left);
-        newVelocity += CameraTransform.up * (Up - Down);
-
-        if (newVelocity.sqrMagnitude > 1) //cap at 1
+        if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
         {
-            newVelocity.Normalize();
+            moveDirection.y = jumpSpeed;
+        }
+        else
+        {
+            moveDirection.y = movementDirectionY;
         }
 
-        newVelocity *= moveSpeed;
-
-        float moveChange = 1 - Mathf.Pow(1 - moveChangeFactor, Time.deltaTime * 10); //smoothly go from old vel to new vel
-        _velocity = Vector3.Lerp(_velocity, newVelocity, moveChange);
-
-        //transform.position += _velocity * Time.deltaTime;
-        CameraTransform.position += _velocity * Time.deltaTime;
-        //leftHandTransform.position += _velocity * Time.deltaTime;
-        // rightHandTransform.position += _velocity * Time.deltaTime;
-    }
-    #endregion
-
-    #region Mouse Control
-    private void ManageRotation()
-    {
-        if (!Input.GetKey(KeyCode.Mouse1))
+        // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
+        // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
+        // as an acceleration (ms^-2)
+        if (!characterController.isGrounded)
         {
-            return;
-        }
-        //Vector3 rot = transform.localEulerAngles;
-        Vector3 rot = CameraTransform.localEulerAngles;
-        rot.y = WrapAngle(rot.y + Input.GetAxis("Mouse X"));
-        CameraTransform.localEulerAngles = rot;
-
-        Vector3 camRot = CameraTransform.transform.localEulerAngles;
-        camRot.x = Mathf.Clamp(WrapAngle(camRot.x - Input.GetAxis("Mouse Y")), -90f, 90f);
-        CameraTransform.transform.localEulerAngles = camRot;
-
-    }
-
-    private float WrapAngle(float angle)
-    {
-        while (angle > 180f)
-        {
-            angle -= 360f;
+            moveDirection.y -= gravity * Time.deltaTime;
         }
 
-        while (angle < -180f)
+        // Move the controller
+        characterController.Move(moveDirection * Time.deltaTime);
+
+        // Player and Camera rotation
+        if (canMove)
         {
-            angle += 360f;
+            rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
+            rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
+            playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
+            transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
         }
-
-        return angle;
-    }
-
-    #endregion
+    }    
 }

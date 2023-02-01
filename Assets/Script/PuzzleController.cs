@@ -1,22 +1,12 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class PuzzleController : MonoBehaviour
 {
-    [InspectorName("Puzzle")]
-    public int columns;
-    public int rows; 
-    float width;
-    float height;
-    float depth;
-
-
     [InspectorName("Pieces")]
-    public float pieceSize;
-    public PieceController[] pieces;
+    //public float pieceSize;
+    public List<PuzzlePiece> pieces = new List<PuzzlePiece>();
 
     
     public event Action OnCompleted;
@@ -24,86 +14,69 @@ public class PuzzleController : MonoBehaviour
 
     private void Awake()
     {
-        width = columns * pieceSize;
-        height = rows * pieceSize;
-    }
-
-    // Get the cell (col, row) given a point in space
-    public Vector2 GetCellFromPoint(Vector3 point)
-    {
-        Vector3 localPoint = transform.InverseTransformPoint(point);
-        depth = localPoint.z;
-
-        localPoint = Vector3.Scale(localPoint, transform.localScale);
-
-        // get cell (col, row)
-        // assumptions: To change for futur game especially 2
-        // 1) the horizontal coordinate is x (not z, z is the depth)
-        // 2) the anchor point of the puzzle is in the center
-        // 3) size of the puzzle match exactly col * rows * pieceSize (equivalent: no padding)
-        // 4) the face of the puzzle is not rotated about X or Z
-
-        float column = Mathf.Floor((localPoint.x + width / 2) / pieceSize);
-        float row = Mathf.Floor((localPoint.y + height / 2) / pieceSize);
-
-        return new Vector2(column, row);
-    }
-
-
-    //Check whether a cell is taken or not
-    public bool IsTaken(Vector2 cell)
-    {
-        for (int i = 0; i < pieces.Length; i++)
+        pieces.Clear();
+        for (int i = 0; i < transform.childCount; i++)
         {
-            if (pieces[i].isPlaced && pieces[i].currCell == cell)
+            if (transform.GetChild(i).GetComponent<PuzzlePiece>())
             {
-                //print("Cell is taken!");
-                return true;
+                pieces.Add(transform.GetChild(i).GetComponent<PuzzlePiece>());
+            }
+            else
+            {
+                Debug.LogError("One children of the transform does not contain PuzzlePiece script", transform.GetChild(i));
             }
         }
-        //print("Cell is free");
-        return false;
     }
 
-    // Give a cell's col,row, get the global coordinate of the center of the cell
-    public Vector3 GetCellPosition(Vector2 cell)
+    public PuzzlePiece GetPuzzlePieceFromCollider(Collider point)
     {
-        // go from cell's col,row --> local point
-        float x = (-width / 2 + pieceSize / 2 + cell.x * pieceSize) / transform.localScale.x;
-        float y = (-height / 2 + pieceSize / 2 + cell.y * pieceSize) / transform.localScale.y;
+        foreach (PuzzlePiece piece in pieces)
+        {
+            if (piece.pieceCollider.bounds.Intersects(point.bounds))
+            {
+                return piece;
+            }
+        }
 
-        Vector3 localPoint = new Vector3(x, y, depth);
-
-        // go from local point --> global point
-        Vector3 globalPoint = transform.TransformPoint(localPoint);
-
-        return globalPoint;
+        return null;
     }
+
+
+    public PuzzlePiece GetPuzzlePieceFromChild(Transform child)
+    {
+        foreach (PuzzlePiece piece in pieces)
+        {
+            if (child.parent == piece.transform)
+            {
+                return piece;
+            }
+        }
+
+        return null;
+    }
+
 
     // Checks for completion of the puzzle
     public void CheckCompletion()
     {
         // keep track of correctness
         bool isCorrect = true;
-
-        for (int i = 0; i < pieces.Length; i++)
+        foreach (PuzzlePiece piece in pieces)
         {
-            // check that all the pieces are placed
-            if (!pieces[i].isPlaced) return;
-
-            // keep track of this "Correctness"
-            isCorrect = isCorrect && pieces[i].CheckCorrect();
+            isCorrect = isCorrect && piece.CheckCorrect();
         }
 
         // that they are all correct
         if (isCorrect)
         {
             // call puzzle completion event
+            Debug.Log("Puzzle is complete");
             if (OnCompleted != null) OnCompleted();
         }
         else
         {
             // call puzzle completion event
+            Debug.Log("Errors is the puzzle");
             if (OnFailed != null) OnFailed();
         }
     }

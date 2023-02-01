@@ -1,8 +1,5 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class Draggable : MonoBehaviour
 {
@@ -45,10 +42,10 @@ public class Draggable : MonoBehaviour
         }
     }
 
-    private void OnMouseDown()
+    private void OnMouseDrag()
     {
         // if it's ready, start dragging
-        if (currentState == State.Ready && !isDragging)
+        if (currentState == State.Ready)
         {
             // Check if the object is not too far 
             float distanceFromCamera = Vector3.Distance(transform.position, Camera.main.transform.position);
@@ -66,7 +63,21 @@ public class Draggable : MonoBehaviour
             if (OnDrag != null)
                 OnDrag();
         }
-        else if (currentState == State.Dragging)
+        //else if (currentState == State.Dragging)
+        //{
+        //    // Set the state to Ready
+        //    currentState = State.Ready;
+        //    isDragging = false;
+
+        //    // Execute event
+        //    if (OnDrop != null)
+        //        OnDrop();
+        //}
+    }
+
+    private void OnMouseUp()
+    {
+        if (currentState == State.Dragging)
         {
             // Set the state to Ready
             currentState = State.Ready;
@@ -77,20 +88,6 @@ public class Draggable : MonoBehaviour
                 OnDrop();
         }
     }
-
-    //private void OnMouseUp()
-    //{
-    //    if (currentState == State.Dragging)
-    //    {
-    //        // Set the state to Ready
-    //        currentState = State.Ready;
-    //        isDragging = false;
-
-    //        // Execute event
-    //        if (OnDrop != null)
-    //            OnDrop();
-    //    }
-    //}
 
     // block a draggable item
     public void ToggleBlock(bool isBlock)

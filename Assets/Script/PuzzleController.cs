@@ -28,11 +28,11 @@ public class PuzzleController : MonoBehaviour
         }
     }
 
-    public PuzzlePiece GetPuzzlePieceFromCollider(Collider point)
+    public PuzzlePiece GetPuzzlePieceFromCollider()
     {
         foreach (PuzzlePiece piece in pieces)
         {
-            if (piece.pieceCollider.bounds.Intersects(point.bounds))
+            if (piece.selectedDrop && !piece.isTaken)
             {
                 return piece;
             }

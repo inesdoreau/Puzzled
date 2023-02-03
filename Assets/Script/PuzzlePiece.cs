@@ -3,14 +3,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Collider))]
 public class PuzzlePiece : MonoBehaviour
 {
+    //public List<Collider> pieceColliders;
     public Collider pieceCollider;
     public List<MeshRenderer> pieceRenderers;
 
     public bool isTaken = false;
     public PieceController correctPiece;
+
+    public Material puzzleMaterial;
+    public Material checkColliderMaterial;
+
+    public bool selectedDrop;
 
 
     private void Awake()
@@ -54,8 +59,21 @@ public class PuzzlePiece : MonoBehaviour
     public void PieceIsPlaced(bool _isTaken)
     {
         pieceCollider.enabled = !_isTaken;
+        //pieceColliders.ForEach(c => c.enabled = !isTaken);
         pieceRenderers.ForEach(r => r.enabled = !_isTaken);
         isTaken = _isTaken;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {  
+        pieceRenderers.ForEach(r => r.sharedMaterial = checkColliderMaterial);
+        selectedDrop = true;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {        
+        pieceRenderers.ForEach(r => r.sharedMaterial = puzzleMaterial);
+        selectedDrop = false;
     }
 
     public bool CheckCorrect()

@@ -14,6 +14,7 @@ public class PieceController : MonoBehaviour
 
     Draggable drag;
     Rigidbody _rigidbody;
+    //public List<Collider> pieceColliders;
 
     private void Awake()
     {
@@ -69,7 +70,7 @@ public class PieceController : MonoBehaviour
     // Takes care of what happens when you drop the piece on the puzzle
     void HandlePuzzleDrop()
     {
-        PuzzlePiece cell = puzzle.GetPuzzlePieceFromCollider(GetComponent<Collider>());
+        PuzzlePiece cell = puzzle.GetPuzzlePieceFromCollider();
 
         if(cell != null && !cell.isTaken)
         {

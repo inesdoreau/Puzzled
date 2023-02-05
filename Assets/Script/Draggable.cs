@@ -4,9 +4,9 @@ using UnityEngine;
 public class Draggable : MonoBehaviour
 {
     // distance from the camera when dragging 
-    public float cameraDistance = 1.0f;
+    [SerializeField] private float cameraDistance = 10.0f;
     // max distance for grabbing 
-    public float maxGrabDistance = 10.0f;
+    [SerializeField] private float maxGrabDistance = 100.0f;
 
     // current state 
     State currentState;
@@ -42,7 +42,7 @@ public class Draggable : MonoBehaviour
         }
     }
 
-    private void OnMouseDrag()
+    private void OnMouseDown()
     {
         // if it's ready, start dragging
         if (currentState == State.Ready)

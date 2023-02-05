@@ -1,88 +1,108 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
+[RequireComponent(typeof(Draggable))]
 public class PuzzlePiece : MonoBehaviour
 {
+    [SerializeField] private PuzzleController puzzle;
+
+    public bool isPlaced { get; set; }
+
+    //To Do : Activate animation ? 
+    //public Animation pieceAnimation;
+
+    Draggable drag;
+    Rigidbody _rigidbody;
     //public List<Collider> pieceColliders;
-    public Collider pieceCollider;
-    public List<MeshRenderer> pieceRenderers;
-
-    public bool isTaken = false;
-    public PieceController correctPiece;
-
-    public Material puzzleMaterial;
-    public Material checkColliderMaterial;
-
-    public bool selectedDrop;
-
 
     private void Awake()
     {
-        pieceCollider = GetComponent<Collider>();
+        drag = GetComponent<Draggable>();
+        _rigidbody= GetComponent<Rigidbody>();
 
-        pieceRenderers.Clear();
-
-        if(transform.childCount == 0)
-        {
-            pieceRenderers.Add(transform.GetComponent<MeshRenderer>());
-        }
-        else
+        if(GetComponent<Collider>() == null)
         {
             for (int i = 0; i < transform.childCount; i++)
             {
-                if (transform.GetChild(i).GetComponent<MeshRenderer>())
+                if (transform.GetChild(i).GetComponent<Collider>())
                 {
-                    pieceRenderers.Add(transform.GetChild(i).GetComponent<MeshRenderer>());
+                    MeshFilter childMesh = transform.GetChild(i).GetComponent<MeshFilter>();
+                    MeshCollider newCollider = transform.AddComponent<MeshCollider>();
+                    newCollider.sharedMesh = childMesh.sharedMesh;
+                    newCollider.convex = true;
                 }
-                else
-                {
-                    Debug.LogError("One children of the transform does not contain Mesh Renderer", transform.GetChild(i));
-                }
+               
             }
-
         }
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnEnable()
     {
-        
+        drag.OnDrag += HandleDrag;
+        drag.OnDrop += HandlePuzzleDrop;
+        //puzzle.OnCompleted += HandleCompletion;
+        //puzzle.OnFailed += HandleFailure;
     }
 
-    public void PieceIsPlaced(bool _isTaken)
+    void OnDisable()
     {
-        pieceCollider.enabled = !_isTaken;
-        //pieceColliders.ForEach(c => c.enabled = !isTaken);
-        pieceRenderers.ForEach(r => r.enabled = !_isTaken);
-        isTaken = _isTaken;
+        drag.OnDrag -= HandleDrag;
+        drag.OnDrop -= HandlePuzzleDrop;
+        puzzle.OnCompleted -= HandleCompletion;
+        //puzzle.OnFailed -= HandleFailure;
     }
 
-    private void OnTriggerEnter(Collider other)
-    {  
-        pieceRenderers.ForEach(r => r.sharedMaterial = checkColliderMaterial);
-        selectedDrop = true;
-    }
-
-    private void OnTriggerExit(Collider other)
-    {        
-        pieceRenderers.ForEach(r => r.sharedMaterial = puzzleMaterial);
-        selectedDrop = false;
-    }
-
-    public bool CheckCorrect()
+    void HandleFailure()
     {
-        if(correctPiece.transform.position == transform.position)
+        // Set the flag to false
+        isPlaced = false;
+    }
+
+    // handle a successful puzzle completion
+    void HandleCompletion()
+    {
+        // block the piece
+        drag.ToggleBlock(true);
+    }
+
+
+    void HandleDrag()
+    {
+        // Set the flag to false
+        _rigidbody.isKinematic = false;
+
+        PuzzleSlot slot = puzzle.GetPuzzlePieceFromChild(transform);
+
+        if (slot != null)
         {
-            return true;
+            slot.PieceIsPlaced(false);
         }
-        
-        return false;
+
+        transform.SetParent(null);
+        isPlaced = false;
     }
+
+    // Takes care of what happens when you drop the piece on the puzzle
+    void HandlePuzzleDrop()
+    {
+        PuzzleSlot slot = puzzle.GetPuzzlePieceFromCollider();
+
+        if(slot != null && !slot.isTaken)
+        {
+            slot.PieceIsPlaced(true);
+            isPlaced = true;
+            _rigidbody.isKinematic = true;
+            transform.SetParent(slot.transform);
+
+            transform.localPosition = Vector3.zero;
+            transform.localRotation = Quaternion.identity;
+
+            puzzle.CheckCompletion();
+        }
+    }
+
+
 }

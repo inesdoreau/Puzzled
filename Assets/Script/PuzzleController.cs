@@ -6,7 +6,7 @@ public class PuzzleController : MonoBehaviour
 {
     [InspectorName("Pieces")]
     //public float pieceSize;
-    public List<PuzzlePiece> pieces = new List<PuzzlePiece>();
+    public List<PuzzleSlot> pieces = new List<PuzzleSlot>();
 
     
     public event Action OnCompleted;
@@ -17,20 +17,20 @@ public class PuzzleController : MonoBehaviour
         pieces.Clear();
         for (int i = 0; i < transform.childCount; i++)
         {
-            if (transform.GetChild(i).GetComponent<PuzzlePiece>())
+            if (transform.GetChild(i).GetComponent<PuzzleSlot>())
             {
-                pieces.Add(transform.GetChild(i).GetComponent<PuzzlePiece>());
+                pieces.Add(transform.GetChild(i).GetComponent<PuzzleSlot>());
             }
             else
             {
-                Debug.LogError("One children of the transform does not contain PuzzlePiece script", transform.GetChild(i));
+                Debug.Log("One children of the transform does not contain PuzzlePiece script", transform.GetChild(i));
             }
         }
     }
 
-    public PuzzlePiece GetPuzzlePieceFromCollider()
+    public PuzzleSlot GetPuzzlePieceFromCollider()
     {
-        foreach (PuzzlePiece piece in pieces)
+        foreach (PuzzleSlot piece in pieces)
         {
             if (piece.selectedDrop && !piece.isTaken)
             {
@@ -42,9 +42,9 @@ public class PuzzleController : MonoBehaviour
     }
 
 
-    public PuzzlePiece GetPuzzlePieceFromChild(Transform child)
+    public PuzzleSlot GetPuzzlePieceFromChild(Transform child)
     {
-        foreach (PuzzlePiece piece in pieces)
+        foreach (PuzzleSlot piece in pieces)
         {
             if (child.parent == piece.transform)
             {
@@ -61,7 +61,7 @@ public class PuzzleController : MonoBehaviour
     {
         // keep track of correctness
         bool isCorrect = true;
-        foreach (PuzzlePiece piece in pieces)
+        foreach (PuzzleSlot piece in pieces)
         {
             isCorrect = isCorrect && piece.CheckCorrect();
         }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PuzzleController : MonoBehaviour
 {
@@ -71,6 +72,8 @@ public class PuzzleController : MonoBehaviour
         {
             // call puzzle completion event
             Debug.Log("Puzzle is complete");
+            PlayerPrefs.SetInt("currentScene", SceneManager.GetActiveScene().buildIndex) ;
+            SceneManager.LoadScene(0);
             if (OnCompleted != null) OnCompleted();
         }
         else

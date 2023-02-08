@@ -29,7 +29,7 @@ public class PuzzleSlot : MonoBehaviour
     {
         if(correctPiece == null)
         {
-            Debug.LogError("No correct piece set for the slot");
+            Debug.LogError("No correct piece set for the slot", this);
         }
     }
 
@@ -50,7 +50,7 @@ public class PuzzleSlot : MonoBehaviour
     {
         if (other.tag.Equals("PuzzlePiece"))
         {
-            if(other.gameObject.GetComponent<PuzzlePiece>().isPlaced) 
+            if (other.gameObject.GetComponent<PuzzlePiece>().isPlaced)
             {
                 return;
             }

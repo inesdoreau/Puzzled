@@ -15,12 +15,14 @@ public class PuzzlePiece : MonoBehaviour
 
     Draggable drag;
     Rigidbody _rigidbody;
+    [SerializeField] private bool isKinematic;
     //public List<Collider> pieceColliders;
 
     private void Awake()
     {
         drag = GetComponent<Draggable>();
         _rigidbody= GetComponent<Rigidbody>();
+        _rigidbody.isKinematic = isKinematic;
 
         if(GetComponent<Collider>() == null)
         {
@@ -71,18 +73,16 @@ public class PuzzlePiece : MonoBehaviour
 
     void HandleDrag()
     {
-        // Set the flag to false
-        _rigidbody.isKinematic = false;
-
         PuzzleSlot slot = puzzle.GetPuzzlePieceFromChild(transform);
-
         if (slot != null)
         {
+            // Set the flag to false
+            _rigidbody.isKinematic = isKinematic;
             slot.PieceIsPlaced(false);
+            transform.SetParent(null);
+            isPlaced = false;
         }
 
-        transform.SetParent(null);
-        isPlaced = false;
     }
 
     // Takes care of what happens when you drop the piece on the puzzle
@@ -94,13 +94,16 @@ public class PuzzlePiece : MonoBehaviour
         {
             slot.PieceIsPlaced(true);
             isPlaced = true;
+
             _rigidbody.isKinematic = true;
             transform.SetParent(slot.transform);
+            transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
+            if (slot.CheckCorrect())
+            {
+                drag.ToggleBlock(true);
+                puzzle.CheckCompletion();
+            }
 
-            transform.localPosition = Vector3.zero;
-            transform.localRotation = Quaternion.identity;
-
-            puzzle.CheckCompletion();
         }
     }
 

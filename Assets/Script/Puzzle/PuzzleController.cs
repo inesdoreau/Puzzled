@@ -79,7 +79,7 @@ public class PuzzleController : MonoBehaviour
         else
         {
             // call puzzle completion event
-            Debug.Log("Errors is the puzzle");
+            Debug.Log("Errors in the puzzle");
             if (OnFailed != null) OnFailed();
         }
     }

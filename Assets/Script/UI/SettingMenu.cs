@@ -58,6 +58,11 @@ public class SettingMenu : MonoBehaviour
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
 
+    public void SetDifficulty(int difficultyIndex)
+    {
+        PlayerPrefs.SetInt("Difficulty", difficultyIndex);
+    }
+
     public void QuitGame()
     {
 #if UNITY_EDITOR

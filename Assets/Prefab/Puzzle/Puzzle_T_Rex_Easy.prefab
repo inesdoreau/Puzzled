@@ -254,8 +254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctPiece: {fileID: 0}
-  puzzleMaterial: {fileID: 2100000, guid: d299096b953d48941bf6598ea7f26df6, type: 2}
-  checkColliderMaterial: {fileID: 2100000, guid: d3fdd53a2b5dd904fad8d824266a4cad, type: 2}
+  puzzlePiece: {fileID: 0}
 --- !u!65 &6066961046887928616
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1019,8 +1018,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctPiece: {fileID: 0}
-  puzzleMaterial: {fileID: 2100000, guid: d299096b953d48941bf6598ea7f26df6, type: 2}
-  checkColliderMaterial: {fileID: 2100000, guid: d3fdd53a2b5dd904fad8d824266a4cad, type: 2}
+  puzzlePiece: {fileID: 0}
 --- !u!65 &6919828136590909865
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3836,8 +3834,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctPiece: {fileID: 0}
-  puzzleMaterial: {fileID: 2100000, guid: d299096b953d48941bf6598ea7f26df6, type: 2}
-  checkColliderMaterial: {fileID: 2100000, guid: d3fdd53a2b5dd904fad8d824266a4cad, type: 2}
+  puzzlePiece: {fileID: 0}
 --- !u!65 &157758240714176150
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5075,8 +5072,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctPiece: {fileID: 0}
-  puzzleMaterial: {fileID: 2100000, guid: d299096b953d48941bf6598ea7f26df6, type: 2}
-  checkColliderMaterial: {fileID: 2100000, guid: d3fdd53a2b5dd904fad8d824266a4cad, type: 2}
+  puzzlePiece: {fileID: 0}
 --- !u!65 &5292401653190298429
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5628,8 +5624,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctPiece: {fileID: 0}
-  puzzleMaterial: {fileID: 2100000, guid: d299096b953d48941bf6598ea7f26df6, type: 2}
-  checkColliderMaterial: {fileID: 2100000, guid: d3fdd53a2b5dd904fad8d824266a4cad, type: 2}
+  puzzlePiece: {fileID: 0}
 --- !u!65 &8625035285159992074
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6197,8 +6192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctPiece: {fileID: 0}
-  puzzleMaterial: {fileID: 2100000, guid: d299096b953d48941bf6598ea7f26df6, type: 2}
-  checkColliderMaterial: {fileID: 2100000, guid: d3fdd53a2b5dd904fad8d824266a4cad, type: 2}
+  puzzlePiece: {fileID: 0}
 --- !u!65 &5058082973151922051
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7145,8 +7139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctPiece: {fileID: 0}
-  puzzleMaterial: {fileID: 2100000, guid: d299096b953d48941bf6598ea7f26df6, type: 2}
-  checkColliderMaterial: {fileID: 2100000, guid: d3fdd53a2b5dd904fad8d824266a4cad, type: 2}
+  puzzlePiece: {fileID: 0}
 --- !u!65 &5601375737697483166
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7311,7 +7304,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2858454992807382364, guid: 4deccd1d17a94b945916a84b8e68760f, type: 3}
       propertyPath: m_Name
-      value: Puzzle_T_Rex
+      value: Puzzle_T_Rex_Easy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4deccd1d17a94b945916a84b8e68760f, type: 3}

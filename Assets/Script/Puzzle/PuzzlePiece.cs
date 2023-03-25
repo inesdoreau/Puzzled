@@ -64,7 +64,7 @@ public class PuzzlePiece : MonoBehaviour
     }
 
     // handle a successful puzzle completion
-    void HandleCompletion()
+    public void HandleCompletion()
     {
         // block the piece
         drag.ToggleBlock(true);

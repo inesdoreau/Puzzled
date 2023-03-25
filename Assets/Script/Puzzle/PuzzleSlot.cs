@@ -8,10 +8,13 @@ public class PuzzleSlot : MonoBehaviour
 {
     
     [SerializeField] private PuzzlePiece correctPiece;
+    [SerializeField] private GameObject puzzlePiece;
 
     private Collider pieceCollider;
     private Outline outline;
-    
+
+    private Color correctColor = Color.green;
+    private Color wrongColor = Color.red;
 
     public bool isTaken { get; private set; }
     public bool selectedDrop { get; private set; }
@@ -50,13 +53,24 @@ public class PuzzleSlot : MonoBehaviour
     {
         if (other.tag.Equals("PuzzlePiece"))
         {
-            if (other.gameObject.GetComponent<PuzzlePiece>().isPlaced)
+            other.gameObject.TryGetComponent(out PuzzlePiece piece);
+            if(piece != null )
             {
-                return;
+                if(piece.isPlaced)
+                {
+                    return;
+                }
+                if(piece == correctPiece)
+                {
+                    outline.OutlineColor = correctColor;
+                }
+                else
+                {
+                    outline.OutlineColor = wrongColor;
+                }
+                outline.enabled = true;
+                selectedDrop = true;
             }
-
-            outline.enabled = true;
-            selectedDrop = true;
         }
     }
 
@@ -70,6 +84,7 @@ public class PuzzleSlot : MonoBehaviour
     {
         if(correctPiece.transform.position == transform.position)
         {
+            puzzlePiece.SetActive(false);
             return true;
         }
         

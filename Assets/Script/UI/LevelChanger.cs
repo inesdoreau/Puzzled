@@ -29,7 +29,7 @@ public class LevelChanger : MonoBehaviour
 
         if(levelDisplay != null)
         {
-            levelDisplay.DisplayLevel((Level)scriptableObjects[currentIndex]);
+            levelDisplay.SetLevelInformation((Level)scriptableObjects[currentIndex]);
         }
     }
 }

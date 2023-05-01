@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7567576580122781047}
   - component: {fileID: 3690094442682362954}
   - component: {fileID: 1490401135511889725}
-  - component: {fileID: 4384832732521842415}
+  - component: {fileID: 7848623765641644743}
   m_Layer: 0
   m_Name: Puzzle Piece
   m_TagString: Untagged
@@ -84,26 +84,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &4384832732521842415
-Animator:
-  serializedVersion: 4
+--- !u!114 &7848623765641644743
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 24246645742221139}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e0ae9462f9082549a48f5d5c02eee42, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee681714daf88d4695755f0c314a17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitudePosition:
+    X: 0
+    Y: 0
+    Z: 0
+  positionCycleDuration: 2
+  amplitudeRotation:
+    X: 0
+    Y: 0
+    Z: 0
+  rotationCycleDuration: 2
 --- !u!1 &220432357981066314
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,7 +249,7 @@ GameObject:
   - component: {fileID: 7706031911425052238}
   - component: {fileID: 3513340593510123379}
   - component: {fileID: 1682879582314580996}
-  - component: {fileID: 359104705030517783}
+  - component: {fileID: 2064240441905696827}
   m_Layer: 0
   m_Name: Puzzle Piece
   m_TagString: Untagged
@@ -320,26 +322,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &359104705030517783
-Animator:
-  serializedVersion: 4
+--- !u!114 &2064240441905696827
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 261800100272905322}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e0ae9462f9082549a48f5d5c02eee42, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee681714daf88d4695755f0c314a17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitudePosition:
+    X: 0
+    Y: 0
+    Z: 0
+  positionCycleDuration: 2
+  amplitudeRotation:
+    X: 0
+    Y: 0
+    Z: 0
+  rotationCycleDuration: 2
 --- !u!1 &266117932920224430
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,7 +751,7 @@ GameObject:
   - component: {fileID: 6500190835647891226}
   - component: {fileID: 234926899860031573}
   - component: {fileID: 4475360796336758304}
-  - component: {fileID: 6705379385046705426}
+  - component: {fileID: 4876565779336236864}
   m_Layer: 0
   m_Name: Puzzle Piece
   m_TagString: Untagged
@@ -820,26 +824,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &6705379385046705426
-Animator:
-  serializedVersion: 4
+--- !u!114 &4876565779336236864
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 969861295150657608}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e0ae9462f9082549a48f5d5c02eee42, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee681714daf88d4695755f0c314a17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitudePosition:
+    X: 0
+    Y: 0
+    Z: 0
+  positionCycleDuration: 2
+  amplitudeRotation:
+    X: 0
+    Y: 0
+    Z: 0
+  rotationCycleDuration: 2
 --- !u!1 &1017401890584107396
 GameObject:
   m_ObjectHideFlags: 0
@@ -983,7 +989,7 @@ GameObject:
   - component: {fileID: 7382999455850490705}
   - component: {fileID: 4342905407341060716}
   - component: {fileID: 2008103793523173659}
-  - component: {fileID: 5771310970925132938}
+  - component: {fileID: 8852736688228306155}
   m_Layer: 0
   m_Name: Puzzle Piece
   m_TagString: Untagged
@@ -1056,26 +1062,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &5771310970925132938
-Animator:
-  serializedVersion: 4
+--- !u!114 &8852736688228306155
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1091810782693554549}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e0ae9462f9082549a48f5d5c02eee42, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee681714daf88d4695755f0c314a17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitudePosition:
+    X: 0
+    Y: 0
+    Z: 0
+  positionCycleDuration: 2
+  amplitudeRotation:
+    X: 0
+    Y: 0
+    Z: 0
+  rotationCycleDuration: 2
 --- !u!1 &1220631940705410912
 GameObject:
   m_ObjectHideFlags: 0
@@ -1483,7 +1491,7 @@ GameObject:
   - component: {fileID: 9138939645317087166}
   - component: {fileID: 2658459385485522563}
   - component: {fileID: 252078495253216756}
-  - component: {fileID: 8555390812121005956}
+  - component: {fileID: 963636532924836778}
   m_Layer: 0
   m_Name: Puzzle Piece
   m_TagString: Untagged
@@ -1556,26 +1564,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &8555390812121005956
-Animator:
-  serializedVersion: 4
+--- !u!114 &963636532924836778
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1695398361473412506}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e0ae9462f9082549a48f5d5c02eee42, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee681714daf88d4695755f0c314a17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitudePosition:
+    X: 0
+    Y: 0
+    Z: 0
+  positionCycleDuration: 2
+  amplitudeRotation:
+    X: 0
+    Y: 0
+    Z: 0
+  rotationCycleDuration: 2
 --- !u!1 &1696756065229787072
 GameObject:
   m_ObjectHideFlags: 0
@@ -1851,7 +1861,7 @@ GameObject:
   - component: {fileID: 8109187891695293908}
   - component: {fileID: 3078536876136897769}
   - component: {fileID: 946325803621898142}
-  - component: {fileID: 6643281487915411250}
+  - component: {fileID: 2398606316664599403}
   m_Layer: 0
   m_Name: Puzzle Piece
   m_TagString: Untagged
@@ -1924,26 +1934,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &6643281487915411250
-Animator:
-  serializedVersion: 4
+--- !u!114 &2398606316664599403
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1863036212400916464}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e0ae9462f9082549a48f5d5c02eee42, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee681714daf88d4695755f0c314a17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitudePosition:
+    X: 0
+    Y: 0
+    Z: 0
+  positionCycleDuration: 2
+  amplitudeRotation:
+    X: 0
+    Y: 0
+    Z: 0
+  rotationCycleDuration: 2
 --- !u!1 &2054378089146260037
 GameObject:
   m_ObjectHideFlags: 0
@@ -2087,7 +2099,7 @@ GameObject:
   - component: {fileID: 8525672472106801829}
   - component: {fileID: 3198103736554722200}
   - component: {fileID: 863245068273604847}
-  - component: {fileID: 253747252879064925}
+  - component: {fileID: 6761616325390107739}
   m_Layer: 0
   m_Name: Puzzle Piece
   m_TagString: Untagged
@@ -2160,26 +2172,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &253747252879064925
-Animator:
-  serializedVersion: 4
+--- !u!114 &6761616325390107739
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2234364915483510913}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e0ae9462f9082549a48f5d5c02eee42, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee681714daf88d4695755f0c314a17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitudePosition:
+    X: 0
+    Y: 0
+    Z: 0
+  positionCycleDuration: 2
+  amplitudeRotation:
+    X: 0
+    Y: 0
+    Z: 0
+  rotationCycleDuration: 2
 --- !u!1 &2885268138949169036
 GameObject:
   m_ObjectHideFlags: 0
@@ -2323,7 +2337,7 @@ GameObject:
   - component: {fileID: 4897208762201383018}
   - component: {fileID: 1857408265609062743}
   - component: {fileID: 4494021015302529568}
-  - component: {fileID: 8381416272664056945}
+  - component: {fileID: 4382892824065281216}
   m_Layer: 0
   m_Name: Puzzle Piece
   m_TagString: Untagged
@@ -2396,26 +2410,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &8381416272664056945
-Animator:
-  serializedVersion: 4
+--- !u!114 &4382892824065281216
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3072910218683527758}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e0ae9462f9082549a48f5d5c02eee42, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee681714daf88d4695755f0c314a17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitudePosition:
+    X: 0
+    Y: 0
+    Z: 0
+  positionCycleDuration: 2
+  amplitudeRotation:
+    X: 0
+    Y: 0
+    Z: 0
+  rotationCycleDuration: 2
 --- !u!1 &3217842945005121223
 GameObject:
   m_ObjectHideFlags: 0
@@ -2559,7 +2575,7 @@ GameObject:
   - component: {fileID: 4948742302198403630}
   - component: {fileID: 2206132084765694739}
   - component: {fileID: 4109235347407425636}
-  - component: {fileID: 4818912404182779098}
+  - component: {fileID: 580800371266410842}
   m_Layer: 0
   m_Name: Puzzle Piece
   m_TagString: Untagged
@@ -2632,26 +2648,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &4818912404182779098
-Animator:
-  serializedVersion: 4
+--- !u!114 &580800371266410842
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3314152463824650250}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e0ae9462f9082549a48f5d5c02eee42, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee681714daf88d4695755f0c314a17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitudePosition:
+    X: 0
+    Y: 0
+    Z: 0
+  positionCycleDuration: 2
+  amplitudeRotation:
+    X: 0
+    Y: 0
+    Z: 0
+  rotationCycleDuration: 2
 --- !u!1 &3388934067720120622
 GameObject:
   m_ObjectHideFlags: 0
@@ -2927,7 +2945,7 @@ GameObject:
   - component: {fileID: 6438459065986943866}
   - component: {fileID: 246211432511341127}
   - component: {fileID: 2662077397234698544}
-  - component: {fileID: 797420446900518141}
+  - component: {fileID: 1013204963884912539}
   m_Layer: 0
   m_Name: Puzzle Piece
   m_TagString: Untagged
@@ -3000,26 +3018,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &797420446900518141
-Animator:
-  serializedVersion: 4
+--- !u!114 &1013204963884912539
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3461379789598136670}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e0ae9462f9082549a48f5d5c02eee42, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee681714daf88d4695755f0c314a17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitudePosition:
+    X: 0
+    Y: 0
+    Z: 0
+  positionCycleDuration: 2
+  amplitudeRotation:
+    X: 0
+    Y: 0
+    Z: 0
+  rotationCycleDuration: 2
 --- !u!1 &3864475338798560841
 GameObject:
   m_ObjectHideFlags: 0
@@ -3163,7 +3183,7 @@ GameObject:
   - component: {fileID: 6005223395423403584}
   - component: {fileID: 677335765602187133}
   - component: {fileID: 3385950446435531786}
-  - component: {fileID: 4942306732700582194}
+  - component: {fileID: 3839075683803683546}
   m_Layer: 0
   m_Name: Puzzle Piece
   m_TagString: Untagged
@@ -3236,26 +3256,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &4942306732700582194
-Animator:
-  serializedVersion: 4
+--- !u!114 &3839075683803683546
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4180919491941543012}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e0ae9462f9082549a48f5d5c02eee42, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee681714daf88d4695755f0c314a17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitudePosition:
+    X: 0
+    Y: 0
+    Z: 0
+  positionCycleDuration: 2
+  amplitudeRotation:
+    X: 0
+    Y: 0
+    Z: 0
+  rotationCycleDuration: 2
 --- !u!1 &4226844373082522570
 GameObject:
   m_ObjectHideFlags: 0
@@ -3267,7 +3289,7 @@ GameObject:
   - component: {fileID: 6051587119561593326}
   - component: {fileID: 705721512983615699}
   - component: {fileID: 3337192945760768932}
-  - component: {fileID: 5921656157309466523}
+  - component: {fileID: 7438853939964607203}
   m_Layer: 0
   m_Name: Puzzle Piece
   m_TagString: Untagged
@@ -3340,26 +3362,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &5921656157309466523
-Animator:
-  serializedVersion: 4
+--- !u!114 &7438853939964607203
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4226844373082522570}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e0ae9462f9082549a48f5d5c02eee42, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee681714daf88d4695755f0c314a17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitudePosition:
+    X: 0
+    Y: 0
+    Z: 0
+  positionCycleDuration: 2
+  amplitudeRotation:
+    X: 0
+    Y: 0
+    Z: 0
+  rotationCycleDuration: 2
 --- !u!1 &4277209708838884414
 GameObject:
   m_ObjectHideFlags: 0
@@ -3899,7 +3923,7 @@ GameObject:
   - component: {fileID: 6271002467978570781}
   - component: {fileID: 952410246884943136}
   - component: {fileID: 3074985088383659607}
-  - component: {fileID: 3517339317405148746}
+  - component: {fileID: 8373668462390000491}
   m_Layer: 0
   m_Name: Puzzle Piece
   m_TagString: Untagged
@@ -3972,26 +3996,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &3517339317405148746
-Animator:
-  serializedVersion: 4
+--- !u!114 &8373668462390000491
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4491313103946448441}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e0ae9462f9082549a48f5d5c02eee42, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee681714daf88d4695755f0c314a17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitudePosition:
+    X: 0
+    Y: 0
+    Z: 0
+  positionCycleDuration: 2
+  amplitudeRotation:
+    X: 0
+    Y: 0
+    Z: 0
+  rotationCycleDuration: 2
 --- !u!1 &4562816838509826309
 GameObject:
   m_ObjectHideFlags: 0
@@ -4003,7 +4029,7 @@ GameObject:
   - component: {fileID: 6197282121689695009}
   - component: {fileID: 878655851613686300}
   - component: {fileID: 3146523419084800363}
-  - component: {fileID: 8466422167952606251}
+  - component: {fileID: 4255956873075404076}
   m_Layer: 0
   m_Name: Puzzle Piece
   m_TagString: Untagged
@@ -4076,26 +4102,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &8466422167952606251
-Animator:
-  serializedVersion: 4
+--- !u!114 &4255956873075404076
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4562816838509826309}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e0ae9462f9082549a48f5d5c02eee42, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee681714daf88d4695755f0c314a17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitudePosition:
+    X: 0
+    Y: 0
+    Z: 0
+  positionCycleDuration: 2
+  amplitudeRotation:
+    X: 0
+    Y: 0
+    Z: 0
+  rotationCycleDuration: 2
 --- !u!1 &4592760060920336954
 GameObject:
   m_ObjectHideFlags: 0
@@ -4107,7 +4135,7 @@ GameObject:
   - component: {fileID: 6264375196371583006}
   - component: {fileID: 927529984154536227}
   - component: {fileID: 3117635725620789844}
-  - component: {fileID: 6667412683786374463}
+  - component: {fileID: 3515078307492686029}
   m_Layer: 0
   m_Name: Puzzle Piece
   m_TagString: Untagged
@@ -4180,26 +4208,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &6667412683786374463
-Animator:
-  serializedVersion: 4
+--- !u!114 &3515078307492686029
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4592760060920336954}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e0ae9462f9082549a48f5d5c02eee42, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee681714daf88d4695755f0c314a17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitudePosition:
+    X: 0
+    Y: 0
+    Z: 0
+  positionCycleDuration: 2
+  amplitudeRotation:
+    X: 0
+    Y: 0
+    Z: 0
+  rotationCycleDuration: 2
 --- !u!1 &4663874587017768352
 GameObject:
   m_ObjectHideFlags: 0
@@ -4310,7 +4340,7 @@ GameObject:
   - component: {fileID: 3038675766324972389}
   - component: {fileID: 8078116416170115672}
   - component: {fileID: 6305059970223016239}
-  - component: {fileID: 1131662993360524266}
+  - component: {fileID: 4129360179315200333}
   m_Layer: 0
   m_Name: Puzzle Piece
   m_TagString: Untagged
@@ -4383,26 +4413,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &1131662993360524266
-Animator:
-  serializedVersion: 4
+--- !u!114 &4129360179315200333
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4861848547506411841}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e0ae9462f9082549a48f5d5c02eee42, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee681714daf88d4695755f0c314a17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitudePosition:
+    X: 0
+    Y: 0
+    Z: 0
+  positionCycleDuration: 2
+  amplitudeRotation:
+    X: 0
+    Y: 0
+    Z: 0
+  rotationCycleDuration: 2
 --- !u!1 &5395491324970699450
 GameObject:
   m_ObjectHideFlags: 0
@@ -5074,7 +5106,7 @@ GameObject:
   - component: {fileID: 4158987081968599743}
   - component: {fileID: 7171708770083163010}
   - component: {fileID: 4907843420797763829}
-  - component: {fileID: 7065329522633958622}
+  - component: {fileID: 7353373745190089604}
   m_Layer: 0
   m_Name: Puzzle Piece
   m_TagString: Untagged
@@ -5147,26 +5179,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &7065329522633958622
-Animator:
-  serializedVersion: 4
+--- !u!114 &7353373745190089604
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5829059018031648923}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e0ae9462f9082549a48f5d5c02eee42, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee681714daf88d4695755f0c314a17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitudePosition:
+    X: 0
+    Y: 0
+    Z: 0
+  positionCycleDuration: 2
+  amplitudeRotation:
+    X: 0
+    Y: 0
+    Z: 0
+  rotationCycleDuration: 2
 --- !u!1 &5889366470896647875
 GameObject:
   m_ObjectHideFlags: 0
@@ -5310,7 +5344,7 @@ GameObject:
   - component: {fileID: 4489876984984609151}
   - component: {fileID: 7241657094255192130}
   - component: {fileID: 4892218120782701365}
-  - component: {fileID: 6511070803659787752}
+  - component: {fileID: 7947239966095012973}
   m_Layer: 0
   m_Name: Puzzle Piece
   m_TagString: Untagged
@@ -5383,26 +5417,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &6511070803659787752
-Animator:
-  serializedVersion: 4
+--- !u!114 &7947239966095012973
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6277021347101586267}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e0ae9462f9082549a48f5d5c02eee42, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee681714daf88d4695755f0c314a17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitudePosition:
+    X: 0
+    Y: 0
+    Z: 0
+  positionCycleDuration: 2
+  amplitudeRotation:
+    X: 0
+    Y: 0
+    Z: 0
+  rotationCycleDuration: 2
 --- !u!1 &6299537889374510616
 GameObject:
   m_ObjectHideFlags: 0
@@ -5678,7 +5714,7 @@ GameObject:
   - component: {fileID: 3839217558604884448}
   - component: {fileID: 8031909976000110813}
   - component: {fileID: 5254642102676548522}
-  - component: {fileID: 7941274738698218813}
+  - component: {fileID: 6662596328439241312}
   m_Layer: 0
   m_Name: Puzzle Piece
   m_TagString: Untagged
@@ -5751,26 +5787,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &7941274738698218813
-Animator:
-  serializedVersion: 4
+--- !u!114 &6662596328439241312
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6635190914483174340}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e0ae9462f9082549a48f5d5c02eee42, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee681714daf88d4695755f0c314a17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitudePosition:
+    X: 0
+    Y: 0
+    Z: 0
+  positionCycleDuration: 2
+  amplitudeRotation:
+    X: 0
+    Y: 0
+    Z: 0
+  rotationCycleDuration: 2
 --- !u!1 &6736834461127421304
 GameObject:
   m_ObjectHideFlags: 0
@@ -5782,7 +5820,7 @@ GameObject:
   - component: {fileID: 3759733573601541980}
   - component: {fileID: 7934768967184299617}
   - component: {fileID: 5298160478087806230}
-  - component: {fileID: 1883055854673481151}
+  - component: {fileID: 6941771058222522170}
   m_Layer: 0
   m_Name: Puzzle Piece
   m_TagString: Untagged
@@ -5855,26 +5893,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &1883055854673481151
-Animator:
-  serializedVersion: 4
+--- !u!114 &6941771058222522170
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6736834461127421304}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e0ae9462f9082549a48f5d5c02eee42, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee681714daf88d4695755f0c314a17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitudePosition:
+    X: 0
+    Y: 0
+    Z: 0
+  positionCycleDuration: 2
+  amplitudeRotation:
+    X: 0
+    Y: 0
+    Z: 0
+  rotationCycleDuration: 2
 --- !u!1 &6837898576496294883
 GameObject:
   m_ObjectHideFlags: 0
@@ -5886,7 +5926,7 @@ GameObject:
   - component: {fileID: 4014486805553932743}
   - component: {fileID: 7892248202411892986}
   - component: {fileID: 5340648325962410893}
-  - component: {fileID: 763137624869738839}
+  - component: {fileID: 6264004234655851013}
   m_Layer: 0
   m_Name: Puzzle Piece
   m_TagString: Untagged
@@ -5959,26 +5999,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &763137624869738839
-Animator:
-  serializedVersion: 4
+--- !u!114 &6264004234655851013
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6837898576496294883}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e0ae9462f9082549a48f5d5c02eee42, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee681714daf88d4695755f0c314a17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitudePosition:
+    X: 0
+    Y: 0
+    Z: 0
+  positionCycleDuration: 2
+  amplitudeRotation:
+    X: 0
+    Y: 0
+    Z: 0
+  rotationCycleDuration: 2
 --- !u!1 &7082410613504406966
 GameObject:
   m_ObjectHideFlags: 0
@@ -6122,7 +6164,7 @@ GameObject:
   - component: {fileID: 906294106209306429}
   - component: {fileID: 6242967812660514304}
   - component: {fileID: 8158363709772399991}
-  - component: {fileID: 4151112178211123633}
+  - component: {fileID: 230031767831816959}
   m_Layer: 0
   m_Name: Puzzle Piece
   m_TagString: Untagged
@@ -6195,26 +6237,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &4151112178211123633
-Animator:
-  serializedVersion: 4
+--- !u!114 &230031767831816959
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7332008954788042009}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e0ae9462f9082549a48f5d5c02eee42, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee681714daf88d4695755f0c314a17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitudePosition:
+    X: 0
+    Y: 0
+    Z: 0
+  positionCycleDuration: 2
+  amplitudeRotation:
+    X: 0
+    Y: 0
+    Z: 0
+  rotationCycleDuration: 2
 --- !u!1 &7690950314687674974
 GameObject:
   m_ObjectHideFlags: 0
@@ -6226,7 +6270,7 @@ GameObject:
   - component: {fileID: 281743722387744890}
   - component: {fileID: 6473999205599748423}
   - component: {fileID: 9098235852270660144}
-  - component: {fileID: 5874561176866217615}
+  - component: {fileID: 9180588304766522010}
   m_Layer: 0
   m_Name: Puzzle Piece
   m_TagString: Untagged
@@ -6299,26 +6343,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &5874561176866217615
-Animator:
-  serializedVersion: 4
+--- !u!114 &9180588304766522010
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7690950314687674974}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e0ae9462f9082549a48f5d5c02eee42, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee681714daf88d4695755f0c314a17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitudePosition:
+    X: 0
+    Y: 0
+    Z: 0
+  positionCycleDuration: 2
+  amplitudeRotation:
+    X: 0
+    Y: 0
+    Z: 0
+  rotationCycleDuration: 2
 --- !u!1 &7767001059328834388
 GameObject:
   m_ObjectHideFlags: 0
@@ -6462,7 +6508,7 @@ GameObject:
   - component: {fileID: 533649490515654026}
   - component: {fileID: 6725933579210194103}
   - component: {fileID: 8848586198383212480}
-  - component: {fileID: 623705242487907567}
+  - component: {fileID: 8164448010730549310}
   m_Layer: 0
   m_Name: Puzzle Piece
   m_TagString: Untagged
@@ -6535,26 +6581,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &623705242487907567
-Animator:
-  serializedVersion: 4
+--- !u!114 &8164448010730549310
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7941162938998319022}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e0ae9462f9082549a48f5d5c02eee42, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee681714daf88d4695755f0c314a17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitudePosition:
+    X: 0
+    Y: 0
+    Z: 0
+  positionCycleDuration: 2
+  amplitudeRotation:
+    X: 0
+    Y: 0
+    Z: 0
+  rotationCycleDuration: 2
 --- !u!1 &7957041297565346357
 GameObject:
   m_ObjectHideFlags: 0
@@ -6566,7 +6614,7 @@ GameObject:
   - component: {fileID: 521955876962301969}
   - component: {fileID: 6705555885985558828}
   - component: {fileID: 8833183103113312859}
-  - component: {fileID: 4374670555094587217}
+  - component: {fileID: 8373657296579613755}
   m_Layer: 0
   m_Name: Puzzle Piece
   m_TagString: Untagged
@@ -6639,26 +6687,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &4374670555094587217
-Animator:
-  serializedVersion: 4
+--- !u!114 &8373657296579613755
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7957041297565346357}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e0ae9462f9082549a48f5d5c02eee42, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee681714daf88d4695755f0c314a17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitudePosition:
+    X: 0
+    Y: 0
+    Z: 0
+  positionCycleDuration: 2
+  amplitudeRotation:
+    X: 0
+    Y: 0
+    Z: 0
+  rotationCycleDuration: 2
 --- !u!1 &8098213023701374442
 GameObject:
   m_ObjectHideFlags: 0
@@ -6670,7 +6720,7 @@ GameObject:
   - component: {fileID: 1815490694447663054}
   - component: {fileID: 4828242241680412403}
   - component: {fileID: 7249231943057425796}
-  - component: {fileID: 4297642358738271313}
+  - component: {fileID: 4459931580483513645}
   m_Layer: 0
   m_Name: Puzzle Piece
   m_TagString: Untagged
@@ -6743,26 +6793,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &4297642358738271313
-Animator:
-  serializedVersion: 4
+--- !u!114 &4459931580483513645
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8098213023701374442}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e0ae9462f9082549a48f5d5c02eee42, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee681714daf88d4695755f0c314a17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitudePosition:
+    X: 0
+    Y: 0
+    Z: 0
+  positionCycleDuration: 2
+  amplitudeRotation:
+    X: 0
+    Y: 0
+    Z: 0
+  rotationCycleDuration: 2
 --- !u!1 &8368250587934696016
 GameObject:
   m_ObjectHideFlags: 0
@@ -6774,7 +6826,7 @@ GameObject:
   - component: {fileID: 2121957860843729012}
   - component: {fileID: 5134669792493517129}
   - component: {fileID: 6978657816076546622}
-  - component: {fileID: 6002671964164783555}
+  - component: {fileID: 5834129283878558540}
   m_Layer: 0
   m_Name: Puzzle Piece
   m_TagString: Untagged
@@ -6847,26 +6899,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &6002671964164783555
-Animator:
-  serializedVersion: 4
+--- !u!114 &5834129283878558540
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8368250587934696016}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e0ae9462f9082549a48f5d5c02eee42, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee681714daf88d4695755f0c314a17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitudePosition:
+    X: 0
+    Y: 0
+    Z: 0
+  positionCycleDuration: 2
+  amplitudeRotation:
+    X: 0
+    Y: 0
+    Z: 0
+  rotationCycleDuration: 2
 --- !u!1 &8581658368414446707
 GameObject:
   m_ObjectHideFlags: 0
@@ -6878,7 +6932,7 @@ GameObject:
   - component: {fileID: 2182950790663300695}
   - component: {fileID: 4934768420233539434}
   - component: {fileID: 7197032631616807965}
-  - component: {fileID: 6594708384892904683}
+  - component: {fileID: 4091252209401023130}
   m_Layer: 0
   m_Name: Puzzle Piece
   m_TagString: Untagged
@@ -6951,26 +7005,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &6594708384892904683
-Animator:
-  serializedVersion: 4
+--- !u!114 &4091252209401023130
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8581658368414446707}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e0ae9462f9082549a48f5d5c02eee42, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee681714daf88d4695755f0c314a17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitudePosition:
+    X: 0
+    Y: 0
+    Z: 0
+  positionCycleDuration: 2
+  amplitudeRotation:
+    X: 0
+    Y: 0
+    Z: 0
+  rotationCycleDuration: 2
 --- !u!1 &8667548119927685948
 GameObject:
   m_ObjectHideFlags: 0
@@ -6982,7 +7038,7 @@ GameObject:
   - component: {fileID: 1232328146441212184}
   - component: {fileID: 5416331157692815397}
   - component: {fileID: 7832185031682872146}
-  - component: {fileID: 3654320257643585333}
+  - component: {fileID: 6925174086339767277}
   m_Layer: 0
   m_Name: Puzzle Piece
   m_TagString: Untagged
@@ -7055,26 +7111,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &3654320257643585333
-Animator:
-  serializedVersion: 4
+--- !u!114 &6925174086339767277
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8667548119927685948}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e0ae9462f9082549a48f5d5c02eee42, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee681714daf88d4695755f0c314a17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitudePosition:
+    X: 0
+    Y: 0
+    Z: 0
+  positionCycleDuration: 2
+  amplitudeRotation:
+    X: 0
+    Y: 0
+    Z: 0
+  rotationCycleDuration: 2
 --- !u!1 &8712337626555339224
 GameObject:
   m_ObjectHideFlags: 0
@@ -7350,7 +7408,7 @@ GameObject:
   - component: {fileID: 1662218096126487913}
   - component: {fileID: 5557957727120614484}
   - component: {fileID: 7690736032342781731}
-  - component: {fileID: 2343109576225609352}
+  - component: {fileID: 9079486807326340818}
   m_Layer: 0
   m_Name: Puzzle Piece
   m_TagString: Untagged
@@ -7423,26 +7481,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &2343109576225609352
-Animator:
-  serializedVersion: 4
+--- !u!114 &9079486807326340818
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9097878663447543629}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e0ae9462f9082549a48f5d5c02eee42, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee681714daf88d4695755f0c314a17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitudePosition:
+    X: 0
+    Y: 0
+    Z: 0
+  positionCycleDuration: 2
+  amplitudeRotation:
+    X: 0
+    Y: 0
+    Z: 0
+  rotationCycleDuration: 2
 --- !u!1 &9195495669594049574
 GameObject:
   m_ObjectHideFlags: 0
@@ -7454,7 +7514,7 @@ GameObject:
   - component: {fileID: 1643739558262005250}
   - component: {fileID: 5548166449044379455}
   - component: {fileID: 7738351063693532232}
-  - component: {fileID: 4122131097017491313}
+  - component: {fileID: 3105560690666180357}
   m_Layer: 0
   m_Name: Puzzle Piece
   m_TagString: Untagged
@@ -7527,26 +7587,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &4122131097017491313
-Animator:
-  serializedVersion: 4
+--- !u!114 &3105560690666180357
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9195495669594049574}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e0ae9462f9082549a48f5d5c02eee42, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee681714daf88d4695755f0c314a17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitudePosition:
+    X: 0
+    Y: 0
+    Z: 0
+  positionCycleDuration: 2
+  amplitudeRotation:
+    X: 0
+    Y: 0
+    Z: 0
+  rotationCycleDuration: 2
 --- !u!1 &9212656810689261516
 GameObject:
   m_ObjectHideFlags: 0
@@ -7558,7 +7620,7 @@ GameObject:
   - component: {fileID: 1624291428644060648}
   - component: {fileID: 5528753366407804117}
   - component: {fileID: 7719518664923594658}
-  - component: {fileID: 7946819913351225143}
+  - component: {fileID: 2246359828891996345}
   m_Layer: 0
   m_Name: Puzzle Piece
   m_TagString: Untagged
@@ -7631,26 +7693,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &7946819913351225143
-Animator:
-  serializedVersion: 4
+--- !u!114 &2246359828891996345
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9212656810689261516}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e0ae9462f9082549a48f5d5c02eee42, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee681714daf88d4695755f0c314a17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitudePosition:
+    X: 0
+    Y: 0
+    Z: 0
+  positionCycleDuration: 2
+  amplitudeRotation:
+    X: 0
+    Y: 0
+    Z: 0
+  rotationCycleDuration: 2
 --- !u!1001 &1047489609487264775
 PrefabInstance:
   m_ObjectHideFlags: 0

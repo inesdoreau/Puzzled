@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -5,35 +6,40 @@ using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static Cinemachine.DocumentationSortingAttribute;
 
 public class LevelDisplay : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI levelName;
-    [SerializeField] private TextMeshProUGUI levelDescription;
+    [SerializeField] private TextMeshProUGUI levelNumber;
     [SerializeField] private Image levelImage;
     [SerializeField] private Button playButton;
+
+    private string levelToLoad;
     //[SerializeField] private GameObject lockIcon;
 
-    public void DisplayLevel(Level _level)
+    public void SetLevelInformation(Level _level)
     {
         levelName.text = _level.name;
-        levelDescription.text = _level.levelDescription;
+        levelNumber.text = _level.levelIndex.ToString();
         levelImage.sprite = _level.levelImage;
 
-        //bool mapUnlocked = PlayerPrefs.GetInt("currentScene", 0) >= _level.levelIndex;
-        //lockIcon.SetActive(!mapUnlocked);
-        //playButton.interactable = mapUnlocked;
-
-        //if(mapUnlocked)
-        //{
-        //    levelImage.color = Color.white;
-        //}
-        //else
-        //{
-        //    levelImage.color = Color.gray;
-        //}
-
-        playButton.onClick.RemoveAllListeners();
+        playButton.onClick.AddListener(() => Debug.Log(_level));
         playButton.onClick.AddListener(() => SceneManager.LoadScene(_level.sceneToLoad.name));
+    }
+
+    private void OnMouseEnter()
+    {
+        Debug.Log("OnMouseEnter");
+
+
+
+        transform.DOScale(new Vector3(1.2f, 1.2f, 1.2f), 1);
+    }
+
+    private void OnMouseExit()
+    {
+        transform.DOScale(new Vector3(1, 1, 1), 1);
+
     }
 }

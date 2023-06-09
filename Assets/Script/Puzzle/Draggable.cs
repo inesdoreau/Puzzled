@@ -15,10 +15,12 @@ public class Draggable : MonoBehaviour
 
     public Rigidbody objectRigidbody;
     private Transform objectGrabPointTransform;
+    private Outline outline;
 
     private void Awake()
     {
         objectRigidbody = GetComponent<Rigidbody>();
+        outline = GetComponent<Outline>();
     }
 
     public void Grab(Transform objectGrabPointTransform)
@@ -41,6 +43,11 @@ public class Draggable : MonoBehaviour
     {
         if (OnDrop != null)
             OnDrop();
+    }
+
+    public void ShowOUtline(bool show)
+    {
+        outline.enabled = show;
     }
 
     private void FixedUpdate()

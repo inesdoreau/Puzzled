@@ -23,6 +23,7 @@ public class TractorBeam : MonoBehaviour
     private Quaternion _rotationOffset;
     private Vector3 _pickTargetPosition;
     private Vector3 _pickForce;
+    private Ray ray;
 
     private void Start()
     {
@@ -71,9 +72,17 @@ public class TractorBeam : MonoBehaviour
 
     private void FixedUpdate()
     {
+        ray = playerCamera.ViewportPointToRay(Vector3.one * .5f);
+
+        if (Physics.Raycast(ray, out RaycastHit hit, _maxGrabDistance, pickUpLayerMask))
+        {
+            if (hit.transform.TryGetComponent(out objectGrabbable))
+            {
+
+            }
+        }
         if (objectGrabbable != null)
         {
-            var ray = playerCamera.ViewportPointToRay(Vector3.one * .5f);
             _pickTargetPosition = (ray.origin + ray.direction * _pickDistance) - objectGrabbable.transform.TransformVector(_pickOffset);
 
             var forceDir = _pickTargetPosition - objectGrabbable.transform.position;
@@ -86,7 +95,6 @@ public class TractorBeam : MonoBehaviour
 
     private void Grab()
     {
-        var ray = playerCamera.ViewportPointToRay(Vector3.one * .5f);
         if (Physics.Raycast(ray, out RaycastHit hit, _maxGrabDistance, pickUpLayerMask))
         {
             if (hit.transform.TryGetComponent(out objectGrabbable))

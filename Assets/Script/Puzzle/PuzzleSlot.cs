@@ -9,6 +9,7 @@ public class PuzzleSlot : MonoBehaviour
     
     [SerializeField] private PuzzlePiece correctPiece;
     [SerializeField] private GameObject puzzlePiece;
+    [SerializeField] private GameObject puzzlePieceAll;
 
     private Collider pieceCollider;
     private Outline outline;
